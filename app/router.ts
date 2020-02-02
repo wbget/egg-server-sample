@@ -8,17 +8,15 @@ export default (app: Application) => {
   router.get('/', controller.home.index);
   if (app.env === 'local') {
     router.post('/', controller.home.debug);
-    router.post('/admin', auth(EnumAuth.admin), controller.home.admin);
   }
-  // ======================= 小程序 start =======================
+  // ======================= 客户端 start =======================
 
-  // 登陆
-  // ======================= 小程序 end =======================
+  // ======================= 客户端 end =======================
 
   // ======================= 后台 start =======================
   router.get('/admin/login', controller.admin.index); // 登陆状态
   router.post('/admin/login', controller.admin.login); // 后台登陆
-  router.get('/admin/logOut', controller.admin.logOut); // 注销账号
+  router.get('/admin/logout', controller.admin.logout); // 注销账号
 
   // 上传接口
   router.post(

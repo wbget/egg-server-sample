@@ -61,7 +61,7 @@ export default class Admin extends Controller {
     this.ctx.session.token = token;
     this.ctx.body = { result: true };
   }
-  public async logOut() {
+  public async logout() {
     this.ctx.session.token = null;
     this.ctx.body = { result: false };
   }

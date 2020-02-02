@@ -3,7 +3,7 @@ import * as UUID from 'uuid-int';
 
 import { IManager, IAdmin, IManagerRole } from '../dao/adminLogin';
 
-const gen = UUID(1, 1560763060);
+const gen = UUID(1, 1580626679);
 
 export default (app: Application) => {
   const { STRING, BIGINT } = app.Sequelize;
