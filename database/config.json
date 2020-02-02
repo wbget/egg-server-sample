@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "sample",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "define": {
+      "underscored": false,
+      "freezeTableName": true,
+      "timestamps": true
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "123456",
+    "database": "sample",
+    "host": "xxx-xxx",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "define": {
+      "underscored": false,
+      "freezeTableName": true,
+      "timestamps": true
+    }
+  }
+}

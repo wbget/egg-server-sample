@@ -1,0 +1,7 @@
+{
+  "extends": ["tslint-config-egg"],
+  "rules": {
+    "array-bracket-spacing": ["error", "never"],
+    "semicolon": [true, "always", "ignore-bound-class-methods"]
+  }
+}
