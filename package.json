@@ -1,15 +1,15 @@
 {
-  "name": "sample-center",
+  "name": "maaee-gateway",
   "version": "1.0.0",
-  "description": "center for sample",
+  "description": "gateway for maaee",
   "private": true,
   "egg": {
     "typescript": true,
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-sample-center",
-    "stop": "egg-scripts stop --title=egg-server-sample-center",
+    "start": "egg-scripts start --daemon --title=egg-server-maaee-gateway",
+    "stop": "egg-scripts stop --title=egg-server-maaee-gateway",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test-local": "egg-bin test",
@@ -18,45 +18,26 @@
     "tsc": "ets && tsc -p tsconfig.json",
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
-    "lint": "tslint --project . -c tslint.json",
-    "clean": "ets clean",
-    "deploy": "git pull && cnpm i && npm run tsc && npm run start"
+    "lint": "eslint . --ext .ts",
+    "clean": "ets clean"
   },
   "dependencies": {
-    "await-stream-ready": "^1.0.1",
-    "bmaplib": "^1.0.1",
-    "crypto": "^1.0.1",
-    "egg": "^2.22.2",
-    "egg-cors": "^2.2.0",
-    "egg-scripts": "^2.11.0",
-    "egg-sequelize": "^5.0.1",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.11",
-    "moment": "^2.24.0",
-    "mysql2": "^1.6.5",
-    "react-amap": "^1.2.8",
-    "sequelize": "^5.8.12",
-    "stream-wormhole": "^1.1.0",
-    "ulid": "^2.3.0",
-    "uuid-int": "^2.0.1"
+    "egg": "^2.6.1",
+    "egg-scripts": "^2.6.0"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
     "@types/supertest": "^2.0.0",
-    "autod": "^3.1.0",
+    "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
-    "egg-bin": "^4.13.0",
     "egg-ci": "^1.8.0",
+    "egg-bin": "^4.11.0",
     "egg-mock": "^3.16.0",
-    "enquirer": "^2.3.0",
-    "sequelize-cli": "^5.5.0",
-    "shelljs": "^0.8.3",
-    "ts-node": "^8.2.0",
-    "tslib": "^1.10.0",
-    "tslint": "^5.0.0",
-    "tslint-config-egg": "^1.0.0",
-    "typescript": "^3.5.2"
+    "tslib": "^1.9.0",
+    "eslint": "^6.7.2",
+    "eslint-config-egg": "^8.0.0",
+    "typescript": "^3.0.0"
   },
   "engines": {
     "node": ">=8.9.0"
@@ -68,9 +49,7 @@
     "type": "git",
     "url": ""
   },
-  "eslintIgnore": [
-    "coverage"
-  ],
+  "eslintIgnore": ["coverage"],
   "author": "wbget",
   "license": "MIT"
 }

@@ -11,9 +11,6 @@ logs/
 *.lock
 *.js
 !.autod.conf.js
-typings/app
-typings/config
-
 
 app/**/*.js
 test/**/*.js
@@ -21,8 +18,3 @@ config/**/*.js
 app/**/*.map
 test/**/*.map
 config/**/*.map
-!db.js
-!database/*
-!database/**/*.js
-app/public/uploads/*
-!.gitkeep

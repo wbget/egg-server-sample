@@ -5,48 +5,11 @@ export default (appInfo: EggAppInfo) => {
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1560930183111_9481';
+  config.keys = appInfo.name + '_1585021808163_6698';
 
   // add your egg config in here
-  config.middleware = ['client'];
+  config.middleware = [];
 
-  config.bodyParser = {
-    enableTypes: ['json', 'form', 'text'],
-    extendTypes: {
-      text: ['text/xml', 'application/xml'],
-    },
-  };
-  config.security = {
-    csrf: {
-      enable: false,
-    },
-    domainWhiteList: ['http://localhost:3000', 'http://127.0.0.1:3000'],
-  };
-  config.cors = {
-    allowMethods: 'GET,PUT,POST,DELETE',
-    credentials: true,
-  };
-
-  config.sequelize = {
-    dialect: 'mysql',
-    host: '127.0.0.1',
-    port: 3306,
-    username: 'root',
-    database: 'sample',
-    define: {
-      underscored: false,
-      freezeTableName: true,
-      timestamps: true,
-    },
-  };
-  config.jwt = {
-    secret: '123456',
-    userExpiresIn: 120 * 60, // s
-    adminExpiresIn: 30 * 24 * 60 * 60, // s
-  };
-  config.client = {
-    match: '/client',
-  };
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
@@ -54,7 +17,7 @@ export default (appInfo: EggAppInfo) => {
 
   // the return config will combines to EggAppConfig
   return {
-    ...(config as {}),
+    ...config,
     ...bizConfig,
   };
 };

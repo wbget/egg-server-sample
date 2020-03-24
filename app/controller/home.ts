@@ -1,10 +1,8 @@
 import { Controller } from 'egg';
-export default class extends Controller {
+
+export default class HomeController extends Controller {
   public async index() {
     const { ctx } = this;
-    ctx.status = 404;
-  }
-  public async debug() {
-    this.ctx.body = { result: true };
+    ctx.body = await ctx.service.test.sayHi('egg');
   }
 }
